@@ -3,35 +3,46 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
+// import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(
+  name,
+  hole1,
+  hole2,
+  hole3,
+  hole4,
+  hole5,
+  hole6,
+  hole7,
+  hole8,
+  hole9
+) {
+  return {
+    name,
+    hole1,
+    hole2,
+    hole3,
+    hole4,
+    hole5,
+    hole6,
+    hole7,
+    hole8,
+    hole9,
+  };
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("OUT", 1, 2, 3, 4, 5, 6, 7, 8, 9),
+  createData("PAR", 4, 5, 3, 4, 4, 4, 5, 3, 4),
+  createData("Score", 4, 5, 3, 4, 4, 4, 5, 3, 4),
 ];
 
-export default function BasicTable() {
+export default function GolfScoreTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
+      <Table sx={{ minWidth: 650 }} aria-label="golf score table">
         <TableBody>
           {rows.map((row) => (
             <TableRow
@@ -41,10 +52,15 @@ export default function BasicTable() {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.hole1}</TableCell>
+              <TableCell align="right">{row.hole2}</TableCell>
+              <TableCell align="right">{row.hole3}</TableCell>
+              <TableCell align="right">{row.hole4}</TableCell>
+              <TableCell align="right">{row.hole5}</TableCell>
+              <TableCell align="right">{row.hole6}</TableCell>
+              <TableCell align="right">{row.hole7}</TableCell>
+              <TableCell align="right">{row.hole8}</TableCell>
+              <TableCell align="right">{row.hole9}</TableCell>
             </TableRow>
           ))}
         </TableBody>
