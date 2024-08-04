@@ -1,11 +1,14 @@
 import "./App.css";
 import * as React from "react";
-import GolfScoreTable from "./components/BasicTable"; // BasicTable コンポーネントのパスを適切に設定
+import OutScoreTable from "./components/OutTable";
+import InScoreTable from "./components/InTable";
 
 function App() {
   return (
     <>
-      <GolfScoreTable />
+      <v1>Player1: 小室幹太</v1>
+      <OutScoreTable />
+      <InScoreTable />
     </>
   );
 }

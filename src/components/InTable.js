@@ -34,12 +34,12 @@ function createData(
 }
 
 const rows = [
-  createData("OUT", 1, 2, 3, 4, 5, 6, 7, 8, 9),
+  createData("IN", 1, 2, 3, 4, 5, 6, 7, 8, 9),
   createData("PAR", 4, 5, 3, 4, 4, 4, 5, 3, 4),
   createData("Score", 4, 5, 3, 4, 4, 4, 5, 3, 4),
 ];
 
-export default function GolfScoreTable() {
+export default function InScoreTable() {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="golf score table">
